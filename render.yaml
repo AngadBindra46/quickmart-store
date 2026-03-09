@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: quickmart-store
+    runtime: node
+    plan: free
+    buildCommand: npm install && node server/seed-blinkit.js
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
